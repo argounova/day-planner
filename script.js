@@ -77,6 +77,16 @@ $('#btn5pm').click(function(){
     localStorage.setItem("task5pm", text);
 });
 
+$('#clearAll').click(function(){
+    if (confirm("Are you sure you want to delete all tasks?")) {
+        localStorage.clear();
+        alert("All tasks have been deleted");
+        location.reload();
+    } else {
+        return;
+    }
+});
+
 init();
 
 });
