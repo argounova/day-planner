@@ -14,9 +14,9 @@ var today = moment();
 $('#currentDay').text(today.format('dddd, MMM Do'));
 
 // This variable used to test the function compareTime
-var currentTime = 09;
+// var currentTime = 09;
 
-// var currentTime = moment().format("HH");
+var currentTime = moment().format("HH");
 
 // function compareTime(){
 //     for (var i = 0; i < allTime.length; i++) {
