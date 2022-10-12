@@ -1,5 +1,101 @@
-// var task = [];
+// var allTime = [09, 10, 11, 12, 13, 14, 15, 16, 17];
+var time9am = 09;
+var time10am = 10;
+var time11am = 11;
+var time12pm = 12;
+var time1pm = 13;
+var time2pm = 14;
+var time3pm = 15;
+var time4pm = 16;
+var time5pm = 17;
 
+
+var today = moment();
+$('#currentDay').text(today.format('dddd, MMM Do'));
+
+// This variable used to test the function compareTime
+var currentTime = 09;
+
+// var currentTime = moment().format("HH");
+
+// function compareTime(){
+//     for (var i = 0; i < allTime.length; i++) {
+//     if (currentTime > allTime[i]){
+//         $('div.col-10').addClass('past');
+//     } else if (currentTime == allTime){
+//         $('div.col-10').addClass('present');
+//     } else {
+//         $('div.col-10').addClass('future');
+//     }
+//     }
+// }
+
+function compareTime(){
+    if (currentTime > time9am){
+        $('#time9am').addClass('past');
+    } else if (currentTime == time9am){
+        $('#time9am').addClass('present');
+    } else {
+        $('#time9am').addClass('future');
+    }
+    if (currentTime > time10am){
+        $('#time10am').addClass('past');
+    } else if (currentTime == time10am){
+        $('#time10am').addClass('present');
+    } else {
+        $('#time10am').addClass('future');
+    }
+    if (currentTime > time11am){
+        $('#time11am').addClass('past');
+    } else if (currentTime == time11am){
+        $('#time11am').addClass('present');
+    } else {
+        $('#time11am').addClass('future');
+    }
+    if (currentTime > time12pm){
+        $('#time12pm').addClass('past');
+    } else if (currentTime == time12pm){
+        $('#time12pm').addClass('present');
+    } else {
+        $('#time12pm').addClass('future');
+    }
+    if (currentTime > time1pm){
+        $('#time1pm').addClass('past');
+    } else if (currentTime == time1pm){
+        $('#time1pm').addClass('present');
+    } else {
+        $('#time1pm').addClass('future');
+    }
+    if (currentTime > time2pm){
+        $('#time2pm').addClass('past');
+    } else if (currentTime == time2pm){
+        $('#time2pm').addClass('present');
+    } else {
+        $('#time2pm').addClass('future');
+    }
+    if (currentTime > time3pm){
+        $('#time3pm').addClass('past');
+    } else if (currentTime == time3pm){
+        $('#time3pm').addClass('present');
+    } else {
+        $('#time3pm').addClass('future');
+    }
+    if (currentTime > time4pm){
+        $('#time4pm').addClass('past');
+    } else if (currentTime == time4pm){
+        $('#time4pm').addClass('present');
+    } else {
+        $('#time4pm').addClass('future');
+    }
+    if (currentTime > time5pm){
+        $('#time5pm').addClass('past');
+    } else if (currentTime == time5pm){
+        $('#time5pm').addClass('present');
+    } else {
+        $('#time5pm').addClass('future');
+    }
+}
+     
 $(document).ready(function(){
 
 function init(){
@@ -88,6 +184,7 @@ $('#clearAll').click(function(){
 });
 
 init();
+compareTime();
 
 });
 
