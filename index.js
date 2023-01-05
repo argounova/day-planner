@@ -7,7 +7,7 @@ $(document).ready(function(){
 
     function handleScheduler(){
         $('.col-10').each(function() {
-            let timeBlock = parseInt($(this).attr('id').split('time')[1]);
+            let timeBlock = parseInt($(this).attr('id').split('block')[1]);
 
             if (timeBlock == currentTime) {
                 $(this).removeClass('past');
@@ -38,9 +38,7 @@ $(document).ready(function(){
 
     $('.saveBtn').on('click', function() {
         let eventText = $(this).siblings('.event-text').val();
-        let eventTime = $(this).siblings().attr('id');
-        console.log(eventText);
-        console.log(eventTime);
+        let eventTime = $(this).siblings('.event-text').attr('id');
         localStorage.setItem(eventTime, eventText);
     });
 
