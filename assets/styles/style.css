@@ -12,12 +12,11 @@ body {
   font-family: 'Prosto One', cursive;
   background-image: url('../images/background-image.jpeg');
   background-size: cover;
-
-  }
+}
   
 header {
   text-align: center;
-  background: rgb(1,13,0);
+  background: var(--color6);
   background: linear-gradient(90deg, rgba(0,0,0,0.8) 3%, rgba(31,37,37,0.8) 98%);  color: black;
   border-bottom: 10px solid black;
   margin-bottom: 1%;

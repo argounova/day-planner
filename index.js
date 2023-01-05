@@ -37,9 +37,9 @@ $(document).ready(function(){
     $('#block17').text(localStorage.getItem('block17'));
 
     $('.saveBtn').on('click', function() {
-        let eventText = $(this).siblings('.event-text').val();
-        let eventTime = $(this).siblings('.event-text').attr('id');
-        localStorage.setItem(eventTime, eventText);
+        let text = $(this).siblings('.content').val();
+        let time = $(this).siblings('.content').attr('id');
+        localStorage.setItem(time, text);
     });
 
     $('#clearAll').click(function(){
