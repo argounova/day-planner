@@ -26,15 +26,15 @@ $(document).ready(function(){
         });
     }
 
-    $('#task9am').text(localStorage.getItem('task9am'));
-    $('#task10am').text(localStorage.getItem('task10am'));
-    $('#task11am').text(localStorage.getItem('task11am'));
-    $('#task12pm').text(localStorage.getItem('task12pm'));
-    $('#task1pm').text(localStorage.getItem('task1pm'));
-    $('#task2pm').text(localStorage.getItem('task2pm'));
-    $('#task3pm').text(localStorage.getItem('task3pm'));
-    $('#task4pm').text(localStorage.getItem('task4pm'));
-    $('#task5pm').text(localStorage.getItem('task5pm'));
+    $('#block9').text(localStorage.getItem('block9'));
+    $('#block10').text(localStorage.getItem('block10'));
+    $('#block11').text(localStorage.getItem('block11'));
+    $('#block12').text(localStorage.getItem('block12'));
+    $('#block13').text(localStorage.getItem('block13'));
+    $('#block14').text(localStorage.getItem('block14'));
+    $('#block15').text(localStorage.getItem('block15'));
+    $('#block16').text(localStorage.getItem('block16'));
+    $('#block17').text(localStorage.getItem('block17'));
 
     $('.saveBtn').on('click', function() {
         let eventText = $(this).siblings('.event-text').val();
