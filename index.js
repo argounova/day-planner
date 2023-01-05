@@ -15,9 +15,8 @@ var today = moment();
 $('#currentDay').text(today.format('dddd, MMM Do'));
 
 let currentTime = moment().format("H");
-console.log(currentTime);
 
-function compareTime(){
+function handleScheduler(){
     $('.col-10').each(function() {
         let timeBlock = parseInt($(this).attr('id').split('time')[1]);
 
@@ -38,26 +37,15 @@ function compareTime(){
     });
 }
 
-function init(){
-    var storedTask = localStorage.getItem('task9am');
-    $('#task9am').text(storedTask);
-    storedTask = localStorage.getItem('task10am');
-    $('#task10am').text(storedTask);
-    storedTask = localStorage.getItem('task11am');
-    $('#task11am').text(storedTask);
-    storedTask = localStorage.getItem('task12pm');
-    $('#task12pm').text(storedTask);
-    storedTask = localStorage.getItem('task1pm');
-    $('#task1pm').text(storedTask);
-    storedTask = localStorage.getItem('task2pm');
-    $('#task2pm').text(storedTask);
-    storedTask = localStorage.getItem('task3pm');
-    $('#task3pm').text(storedTask);
-    storedTask = localStorage.getItem('task4pm');
-    $('#task4pm').text(storedTask);
-    storedTask = localStorage.getItem('task5pm');
-    $('#task5pm').text(storedTask);
-}
+$('#task9am').text(localStorage.getItem('task9am'));
+$('#task10am').text(localStorage.getItem('task10am'));
+$('#task11am').text(localStorage.getItem('task11am'));
+$('#task12pm').text(localStorage.getItem('task12pm'));
+$('#task1pm').text(localStorage.getItem('task1pm'));
+$('#task2pm').text(localStorage.getItem('task2pm'));
+$('#task3pm').text(localStorage.getItem('task3pm'));
+$('#task4pm').text(localStorage.getItem('task4pm'));
+$('#task5pm').text(localStorage.getItem('task5pm'));
 
 $('#btn9am').click(function(){
     var text = $('#task9am').val();
@@ -123,8 +111,7 @@ $('#clearAll').click(function(){
     }
 });
 
-init();
-compareTime();
+handleScheduler();
 
 });
 
