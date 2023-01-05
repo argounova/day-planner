@@ -1,7 +1,9 @@
 let allTime = [9, 10, 11, 12, 13, 14, 15, 16, 17];
 let currentTime = moment().format("H");
 let today = moment();
-$('#currentDay').text(today.format('dddd, MMM Do'));
+$('#currentDate').text(today.format('Do MMMM YYYY'));
+$('.offcanvas-title').text(today.format('dddd, H:mm a'));
+
 
 $(document).ready(function(){
 

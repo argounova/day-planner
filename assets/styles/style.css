@@ -77,6 +77,24 @@ header h1, h3, p {
   justify-content: flex-end;
 }
 
+.contactCard input {
+  margin: 5px 0px;
+}
+
+#contactSubmit {
+  margin-top: 10px;
+  background-color: var(--color6);
+  color: var(--color3);
+  border: none;
+  width: 100%;
+}
+
+#contactSubmit:hover {
+  color: var(--color4);
+  background-color: var(--color6);
+  transition: all .3s ease-in-out;
+}
+
 #clearAll {
   width: 15%;
 }
