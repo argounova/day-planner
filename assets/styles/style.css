@@ -73,12 +73,43 @@ header h1, h3, p {
   transition: all .3s ease-in-out;
 }
 
+.btn-sendFormOK {
+  background-color: var(--color6);
+  color: var(--color4);
+  width: 20%;
+}
+
 .clear-all {
   justify-content: flex-end;
 }
 
 .contactCard input {
   margin: 5px 0px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 2px;
+  text-underline-offset: .4em;  
+  color: var(--color1);
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+}
+
+.offcanvas-body {
+  max-height: 100vh;
+}
+
+.offcanvas-ul {
+  height: 80%;
+}
+
+.offcanvas-ul2 {
+  display: flex;
+  align-items: flex-end;
+  height: 20%;
 }
 
 #contactSubmit {

@@ -25,7 +25,7 @@
             <p>Thanks for reaching out.  Please allow 1-2 business days for a response.</p>
           </div>
           <div class="modal-footer justify-content-center">
-            <button type="button" class="btn btn-primary btn-sendFormOK" data-bs-dismiss="modal">OK</button>
+            <button type="button" class="btn btn-sendFormOK" data-bs-dismiss="modal">OK</button>
           </div>
         </div>
       </div>
@@ -44,7 +44,7 @@
             <p>Something went wrong.  Please try to submit the form again.  If the problem persists, please contact me directly at "putzstuck@gmail.com".</p>
           </div>
           <div class="modal-footer justify-content-center">
-            <button type="button" class="btn btn-primary btn-sendFormOK" data-bs-dismiss="modal">OK</button>
+            <button type="button" class="btn btn-sendFormOK" data-bs-dismiss="modal">OK</button>
           </div>
         </div>
       </div>
@@ -63,38 +63,55 @@
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <h5>About</h5>
-                  <p style="color: #1F2525;">This is the about section.  Write some stuff here.</p>
-                </li>
-                <li class="nav-item">
-                  <h5>Contact</h5>
-                  <form class="form contactCard" id="contact-form">
-                    <input type="hidden" name="contact_number">
-                    <input
-                      class="form-control"
-                      name="user_name"
-                      type="text"
-                      placeholder="Name"
-                    >
-                    <input
-                      class="form-control"
-                      name="user_email"
-                      type="email"
-                      placeholder="Email"
-                    >
-                    <textarea
-                      class="form-control"
-                      name="message"
-                      type="text"
-                      placeholder="Message"
-                      rows="5"
-                    ></textarea>
-                    <button type="submit" value="Send" class="btn btn-primary" id="contactSubmit">Submit</button>
-                  </form>
-                </li>
-              </ul>
+              <div class="offcanvas-ul">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <h5>About</h5>
+                    <p style="color: #1F2525;">This is the about section.  Write some stuff here.</p>
+                  </li>
+                  <li class="nav-item">
+                    <h5>Contact</h5>
+                    <div class="input-group">
+                      <form class="form contactCard" id="contact-form" style="width: 100%;"">
+                        <input type="hidden" name="contact_number">
+                        <input
+                          class="form-control"
+                          name="user_name"
+                          type="text"
+                          placeholder="Name"
+                        >
+                        <input
+                          class="form-control"
+                          name="user_email"
+                          type="email"
+                          placeholder="Email"
+                        >
+                        <textarea
+                          class="form-control"
+                          name="message"
+                          type="text"
+                          placeholder="Message"
+                          rows="5"
+                        ></textarea>
+                        <button type="submit" value="Send" class="btn btn-primary" id="contactSubmit">Submit</button>
+                      </form>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="offcanvas-ul2">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a href="https://github.com/argounova" target="_blank">GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="https://www.linkedin.com/in/craig-putzstuck-8473b7161/" target="_blank">LinkedIn</a>
+                  </li>
+                  <li class="nav-item">
+                    <p style="color: #1F2525;">Designed and coded by<br>Craig Putzstuck 2023</p>
+                  </li>              
+                </ul>
+              </div>
             </div>
           </div>
         </div>
