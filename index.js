@@ -1,9 +1,13 @@
 let allTime = [9, 10, 11, 12, 13, 14, 15, 16, 17];
 let currentTime = moment().format("H");
 let today = moment();
+let contactForm = document.getElementById('contact-form');
+
 $('#currentDate').text(today.format('Do MMMM YYYY'));
 $('.offcanvas-title').text(today.format('dddd, H:mm a'));
-
+$('.btn-sendFormOK').on('click', function() {
+    location.reload();
+});
 
 $(document).ready(function(){
 
@@ -27,6 +31,21 @@ $(document).ready(function(){
             }
         });
     }
+
+    function handleContactSubmit(e) {
+        e.preventDefault();
+        emailjs.init('ZElOBNy_cU2ZofiP0');
+        console.log(this);
+        this.contact_number.value = Math.random() * 100000 | 0;
+        emailjs.sendForm('service_peaz7nq', 'contact_formPasswordGen', this)
+          .then(function(response) {
+            $('#sendFormSucceed').modal('show');
+            console.log('Email sent', response.status, response.text);
+          }, function(error) {
+            $('sendFormFail').modal('show');
+            console.log('Email failed to send...', error);
+          });
+      }
 
     $('#block9').text(localStorage.getItem('block9'));
     $('#block10').text(localStorage.getItem('block10'));
@@ -55,5 +74,5 @@ $(document).ready(function(){
     });
 
     handleScheduler();
-
+    contactForm.addEventListener('submit', handleContactSubmit);
 });
