@@ -12,7 +12,7 @@ $('.btn-sendFormOK').on('click', function() {
 $(document).ready(function(){
 
     function handleScheduler(){
-        $('.col-10').each(function() {
+        $('.content').each(function() {
             let timeBlock = parseInt($(this).attr('id').split('block')[1]);
 
             if (timeBlock == currentTime) {
